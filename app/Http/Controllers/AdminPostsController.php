@@ -21,7 +21,9 @@ class AdminPostsController extends Controller
 
     public function store(Request $request)
     {
-        //
+        Post::create($request->all());
+        // 將 View 送出的表單資料跟 Post 這個 Model 連接(Model 用來存取資料表)，進行新增
+        return redirect()->route('admin.posts.index');
     }
 
     public function edit($id)
