@@ -14,6 +14,7 @@
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <a class="btn btn-success btn-sm" href="{{ route('admin.posts.create') }}">新增</a>
+        <!--用來串接AdminPostsController的create()方法，以便回傳新增貼文的表單，表單定義在create.blade.php。-->
     </div>
     <table class="table">
         <thead>
@@ -31,6 +32,7 @@
                 <td>{{$post->title}}</td>
                 <td style="text-align: right">{{($post->is_feature)? 'v' : 'x'}}</td>
                 <td>
+                    <!-- route('admin.posts.edit',$post->id) 此超連結路由是練習6的起始路由，用來叫出某一貼文，以便進行修改。-->
                     <a href="{{ route('admin.posts.edit', $post->id)}}">編輯</a>
                     /
                     <a href="#">刪除</a>
