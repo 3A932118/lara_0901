@@ -14,6 +14,7 @@
             <li>錯誤 1</li>
         </ul>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        @include('admin.layouts.shared.errors')
     </div>
     <form action="{{route('admin.posts.store')}}" method="POST" role="form">
         @csrf
